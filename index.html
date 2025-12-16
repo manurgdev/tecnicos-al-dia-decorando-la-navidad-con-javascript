@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Árbol de Navidad con JS, CSS y controles</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+    <h1>Árbol de Navidad generado por algoritmo</h1>
+
+    <section class="controls" aria-label="Controles del árbol de Navidad">
+  <div class="control">
+    <label for="levels">
+      Filas del árbol:
+      <span id="levels-value">10</span>
+    </label>
+    <input
+      id="levels"
+      type="range"
+      min="10"
+      max="20"
+      value="10"
+    />
+  </div>
+
+  <div class="control">
+    <label for="ornaments">
+      Porcentaje de bolas:
+      <span id="ornaments-value">30%</span>
+    </label>
+    <input
+      id="ornaments"
+      type="range"
+      min="0"
+      max="60"
+      value="30"
+    />
+  </div>
+
+  <div class="control control--inline">
+    <label for="animation-toggle">
+      Animación de luces
+    </label>
+    <label class="control-toggle">
+      <input
+        id="animation-toggle"
+        type="checkbox"
+        checked
+      />
+    </label>
+  </div>
+</section>
+
+
+    <section
+      class="tree-wrapper"
+      aria-label="Árbol de Navidad con bolas y luces"
+      role="img"
+    >
+      <div class="tree-body">
+        <div class="tree" id="tree"></div>
+      </div>
+      <div class="tree-trunk" aria-hidden="true"></div>
+    </section>
+
+    <p class="hint">
+      Si te marean las animaciones, en los ajustes del sistema puedes activar
+      “reducir movimiento” y las luces se quedarán fijas ✨
+    </p>
+
+    <script src="tree.js"></script>
+  </main>
+</body>
+</html>
